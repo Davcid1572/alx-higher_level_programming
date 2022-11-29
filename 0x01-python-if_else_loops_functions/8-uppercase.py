@@ -1,8 +1,7 @@
-#!/usr/bin/phython3
+#!/usr/bin/python3
 def uppercase(str):
-    for i in str:
-        convr = ord(i)
-        if convr in range(97, 123):
-            convr = convr - 32
-        print("{:c}".format(convr), end="")
+    for i in str[:]:
+        if ord(i) >= 97 and ord(i) <= 122:
+            i = chr(ord(i) - 32)
+        print("{}".format(i), end="")
     print()
